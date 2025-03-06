@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Course - Easy Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your existing styles here */
+        .code-container {
+            margin: 2rem 0;
+        }
+
+        .code-example {
+            border: 2px solid #4a90e2;
+            padding: 1rem;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            overflow: auto;
+            margin-bottom: 1rem;
+        }
+
+        .code-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .code-example code {
+            display: block;
+            color: #333;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 300px; /* Adjust height as needed */
+            border: 2px solid #4a90e2;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .nav-links a {
+            padding: 1rem 2rem;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .nav-links a:hover {
+            background: #555;
+        }
+
+        .intro, .content {
+            padding: 2rem;
+            text-align: center;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .intro h1, .content h2 {
+            color: #333;
+        }
+
+        .content p {
+            color: #666;
+        }
+
+        .content h2 {
+            color: #4a90e2;
+        }
+
+        .html-info {
+            background-color: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #4a90e2;
+            margin-bottom: 2rem;
+        }
+
+        .html-history {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border: 2px solid #4a90e2;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .html-history table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+
+        .html-history th, .html-history td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .html-history th {
+            background-color: #4a90e2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <center><a href="index.html" class="logo">Easy Learn</a></center>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses</a>
+                        <ul class="dropdown-content">
+                            <li><a href="html.html">HTML</a></li>
+                            <li><a href="css.html">CSS</a></li>
+                            <li><a href="java.html">Java</a></li>
+                            <li><a href="python.html">Python</a></li>
+                            <li><a href="c.html">C</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html" class="signin-btn">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>HTML Course</h1>
+            <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page and consists of a series of elements that tell the browser how to display content.</p>
+        </section>
+        
+        <section class="content">
+            <h2>What is HTML?</h2>
+            <div class="html-info">
+                <p>HTML stands for Hyper Text Markup Language. It is the standard markup language for creating web pages and describes the structure of a web page. HTML consists of a series of elements that tell the browser how to display the content. HTML elements label pieces of content such as "this is a heading", "this is a paragraph", or "this is a link".</p>
+            </div>
+
+            <h2>A Simple HTML Document</h2>
+<h3 style="text-align: left;">EXAMPLE 1:</h3>
+            <!-- Code Example 1 -->
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">HTML Example 1:</div>
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML Example 1&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;HTML Example 1&lt;/h1&gt;
+    &lt;p&gt;This is the content of HTML Example 1.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code>
+                </div>
+<h2 style="text-align:left;color:#333">Output:</h2>
+                <!-- Iframe Output for Example 1 -->
+                <iframe src="html_example1.html" class="iframe-container" title="HTML Example 1 Output"></iframe>
+            </div>
+            <h3 style="text-align: left;">EXAMPLE 2:</h3>
+            <!-- Code Example 2 -->
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">HTML Example 2:</div>
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML Example 2&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;HTML Example 2&lt;/h1&gt;
+    &lt;p&gt;This is the content of HTML Example 2.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code>
+                </div>
+               <h2 style="text-align:left;color:#333">Output:</h2>
+                <!-- Iframe Output for Example 2 -->
+                <iframe src="html_example2.html" class="iframe-container" title="HTML Example 2 Output"></iframe>
+            </div>
+            <h3 style="text-align: left;">EXAMPLE 3:</h3>
+            <!-- Code Example 3 -->
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">HTML Example 3:</div>
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML Example 3&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;HTML Example 3&lt;/h1&gt;
+    &lt;p&gt;This is the content of HTML Example 3.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <!-- Iframe Output for Example 3 -->
+                <iframe src="html_example3.html" class="iframe-container" title="HTML Example 3 Output"></iframe>
+            </div>
+
+            <!-- HTML History Section -->
+            <section class="html-history">
+                <h2>HTML History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Version</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1989</td>
+                            <td>Tim Berners-Lee invented WWW</td>
+                        </tr>
+                        <tr>
+                            <td>1991</td>
+                            <td>Tim Berners-Lee invented HTML</td>
+                        </tr>
+                        <tr>
+                            <td>1993</td>
+                            <td>Dave Raggett drafted HTML+</td>
+                        </tr>
+                        <tr>
+                            <td>1995</td>
+                            <td>HTML Working Group defined HTML 2.0</td>
+                        </tr>
+                        <tr>
+                            <td>1997</td>
+                            <td>Easy Learn Recommendation: HTML 3.2</td>
+                        </tr>
+                        <tr>
+                            <td>1999</td>
+                            <td>Easy Learn Recommendation: HTML 4.01</td>
+                        </tr>
+                        <tr>
+                            <td>2000</td>
+                            <td>Easy Learn Recommendation: XHTML 1.0</td>
+                        </tr>
+                        <tr>
+                            <td>2008</td>
+                            <td>WHATWG HTML5 First Public Draft</td>
+                        </tr>
+                        <tr>
+                            <td>2012</td>
+                            <td>WHATWG HTML5 Living Standard</td>
+                        </tr>
+                        <tr>
+                            <td>2014</td>
+                            <td>Easy Learn Recommendation: HTML5</td>
+                        </tr>
+                        <tr>
+                            <td>2016</td>
+                            <td>Easy Learn Candidate Recommendation: HTML 5.1</td>
+                        </tr>
+                        <tr>
+                            <td>2017</td>
+                            <td>Easy Learn Recommendation: HTML5.1 2nd Edition</td>
+                        </tr>
+                        <tr>
+                            <td>2017</td>
+                            <td>Easy Learn Recommendation: HTML5.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Easy Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset default margins and padding */
+.carousel-container, .slides, .slide {
+    margin: 0;
+    padding: 0;
+}
+
+.slide img {
+    display: block; /* Ensures the image behaves like a block element, removing bottom space */
+}
+.carousel-container {
+    display: flex;
+}
+
+.slide img {
+    width: 100%; /* Ensure image takes up full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes space below the image */
+}
+.carousel-container {
+    max-height: 500px; /* Set a fixed height if needed, adjust as per your design */
+    overflow: hidden;
+}
+/* Slider Styles */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensure no extra space below the image */
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.dots {
+    text-align: center;
+    padding: 10px;
+}
+
+.dots span {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dots span:hover {
+    background-color: #717171;
+}
+
+        /* Slider Styles */
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            margin: 2rem auto;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button {
+            background-color: #333;
+            border: none;
+            color: #fff;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .dots {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .dots span {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dots span:hover {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <center><a href="index.html" class="logo">Easy Learn</a></center>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses</a>
+                        <ul class="dropdown-content">
+                            <li><a href="html.html">HTML</a></li>
+                            <li><a href="css.html">CSS</a></li>
+                            <li><a href="java.html">Java</a></li>
+                            <li><a href="python.html">Python</a></li>
+                            <li><a href="c.html">C</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html" class="signin-btn">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h1>Our Courses</h1>
+            <p>Explore our wide range of courses designed to enhance your skills and knowledge.</p>
+            
+            <!-- Courses Section -->
+            <section class="courses">
+                <!-- HTML Course -->
+                <h2>1. HTML</h2>
+                <div class="carousel-container">
+                    <div class="slides">
+                        <div class="slide"><img src="html11.jpeg" alt="HTML Course Slide 1"></div>
+                        <div class="slide"><img src="html12.jpeg" alt="HTML Course Slide 2"></div>
+                        <div class="slide"><img src="html13.jpeg" alt="HTML Course Slide 3"></div>
+                        <div class="slide"><img src="html14.jpeg" alt="HTML Course Slide 4"></div>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="carousel-button" id="prev-html">❮</button>
+                        <button class="carousel-button" id="next-html">❯</button>
+                    </div>
+                </div>
+                <div class="dots" id="dots-html">
+                    <span class="dot" onclick="currentSlide(1, 'html')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'html')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'html')"></span>
+                    <span class="dot" onclick="currentSlide(4, 'html')"></span>
+                </div>
+                <div class="course-info">
+                    <p>HTML (HyperText Markup Language) is the standard language used to create and design webpages. You will learn the basic building blocks of web development, including creating headings, paragraphs, links, and more.</p>
+                    <h4><u><a href="html.html">Click here to learn HTML</a></u></h4>
+                </div>
+
+                <!-- Java Course -->
+                <h2>2. Java</h2>
+                <div class="carousel-container">
+                    <div class="slides">
+                        <div class="slide"><img src="java11.png" alt="Java Course Slide 1"></div>
+                        <div class="slide"><img src="java1.webp" alt="Java Course Slide 2"></div>
+                        <div class="slide"><img src="java12.jpg" alt="Java Course Slide 3"></div>
+                        <div class="slide"><img src="java13.webp" alt="Java Course Slide 4"></div>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="carousel-button" id="prev-java">❮</button>
+                        <button class="carousel-button" id="next-java">❯</button>
+                    </div>
+                </div>
+                <div class="dots" id="dots-java">
+                    <span class="dot" onclick="currentSlide(1, 'java')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'java')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'java')"></span>
+                    <span class="dot" onclick="currentSlide(4, 'java')"></span>
+                </div>
+                <div class="course-info">
+                    <p>Java is a versatile, object-oriented programming language widely used in enterprise applications, Android development, and web development. You'll learn core concepts such as classes, objects, inheritance, and more.</p>
+                    <h4><u><a href="java.html">Click here to learn Java</a></u></h4>
+                </div>
+
+                <!-- C Course -->
+                <h2>3. C</h2>
+                <div class="carousel-container">
+                    <div class="slides">
+                        <div class="slide"><img src="c1.png" alt="C Course Slide 1"></div>
+                        <div class="slide"><img src="c11.png" alt="C Course Slide 2"></div>
+                        <div class="slide"><img src="c12.png" alt="C Course Slide 3"></div>
+                        <div class="slide"><img src="c13" alt="C Course Slide 4"></div>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="carousel-button" id="prev-c">❮</button>
+                        <button class="carousel-button" id="next-c">❯</button>
+                    </div>
+                </div>
+                <div class="dots" id="dots-c">
+                    <span class="dot" onclick="currentSlide(1, 'c')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'c')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'c')"></span>
+                    <span class="dot" onclick="currentSlide(4, 'c')"></span>
+                </div>
+                <div class="course-info">
+                    <p>The C programming language is fundamental to understanding computer science concepts. You'll learn about data types, control structures, functions, and pointers, which are crucial for system-level programming.</p>
+                    <h4><u><a href="c.html">Click here to learn C</a></u></h4>
+                </div>
+
+                <!-- Repeat similar structure for other courses (Python, CSS) -->
+            </section>
+        </section>
+        
+        <!-- Reviews and Q&A Section -->
+        <section class="reviews-qa">
+            <h4>Reviews and Questions</h4>
+            <div class="qa">
+                <h5>Is Easy Learn suitable for beginners?</h5>
+                <p>Yes, Easy Learn is designed for learners at all levels, with interactive lessons that make complex topics easy to understand.</p>
+            </div>
+            <div class="qa">
+                <h5>What topics are covered in each course?</h5>
+                <p>Each course is comprehensive, covering fundamental to advanced topics. The HTML course, for instance, teaches web development basics, while Python covers data structures and algorithms.</p>
+            </div>
+            <div class="qa">
+                <h5>How do I sign up for courses?</h5>
+                <p>Simply click on the desired course link, create an account, and start learning!</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Slider
+        function initializeSlider(course) {
+            const slides = document.querySelector(`#${course} .slides`);
+            const slideCount = document.querySelectorAll(`#${course} .slides .slide`).length;
+            let index = 0;
+
+            function showSlide(i) {
+                const offset = -i * 100;
+                slides.style.transform = `translateX(${offset}%)`;
+                document.querySelector(`#dots-${course} .active`).classList.remove('active');
+                document.querySelector(`#dots-${course} span:nth-child(${i + 1})`).classList.add('active');
+            }
+
+            document.getElementById(`next-${course}`).addEventListener('click', () => {
+                index = (index + 1) % slideCount;
+                showSlide(index);
+            });
+
+            document.getElementById(`prev-${course}`).addEventListener('click', () => {
+                index = (index - 1 + slideCount) % slideCount;
+                showSlide(index);
+            });
+
+            // Optional: Auto-slide
+            setInterval(() => {
+                index = (index + 1) % slideCount;
+                showSlide(index);
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        // Initialize sliders for each course
+        initializeSlider('html');
+        initializeSlider('java');
+        initializeSlider('c');
+        // Repeat for other courses like 'python', 'css'
+    </script>
+</body>
+</html>

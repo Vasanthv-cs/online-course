@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Easy Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .social-media ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .social-media ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .social-media ul li img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .fake-map {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .map-and-video {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .map-and-video iframe {
+            border: 0;
+        }
+
+        .google-map,
+        .youtube-video {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .youtube-video {
+            max-width: 420px;
+        }
+
+        .google-map iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Easy Learn</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses</a>
+                        <ul class="dropdown-content">
+                            <li><a href="html.html">HTML</a></li>
+                            <li><a href="css.html">CSS</a></li>
+                            <li><a href="courses.html#java">Java</a></li>
+                            <li><a href="courses.html#python">Python</a></li>
+                            <li><a href="courses.html#c">C</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html" class="signin-btn">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or need assistance, please reach out to us. For detailed inquiries, send an email to <a href="mailto:demolearn@gmail.com">demolearn@gmail.com</a>.</p>
+            <p>For feedback, please <a href="feedback.html">click here</a> to provide your thoughts.</p>
+        </section>
+
+        <section class="social-media">
+            <h2>Connect with Us</h2>
+            <ul>
+                <li><img src="whatsapp.jpeg" alt="WhatsApp Icon"><a href="https://wa.me/1234567890" target="_blank">WhatsApp</a></li>
+                <li><img src="instagram.webp" alt="Instagram Icon"><a href="https://instagram.com/yourprofile" target="_blank">Instagram</a></li>
+            </ul>
+        </section>
+
+        <section class="contact-details">
+            <h2>Contact Details</h2>
+            <p>Address: 123 Easy Learn Lane, Knowledge City, Learnland, 45678</p>
+            <p>Email: <a href="mailto:demolearn@gmail.com">demolearn@gmail.com</a></p>
+            <p>Phone: +1-234-567-8901</p>
+        </section>
+
+        <section class="map-section">
+            <h2>Our Location</h2>
+            <div class="map-and-video">
+                <div class="google-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.964152494191!2d77.86935930000001!3d12.715761600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae70c830f1125f%3A0x55d856c47cfec47a!2sAdhiyamaan%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1726101370116!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+                <h2>Also watch:</h2>
+                <div class="youtube-video">
+                  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/MDLn5-zSQQI?si=7hdSHP4KJqtNvJC9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+                </div>
+           
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Easy Learn</title>
+<style>
+    /* Reset and Default Styles */
+body, h1, h2, h3, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center; /* Center the text by default */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navbar Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar content */
+    align-items: center;
+    gap: 2rem; /* Adds spacing between logo and nav-links */
+    padding: 1rem 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Add spacing between links */
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+    background: #555;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #444;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #555;
+}
+
+/* Show the dropdown content on hover */
+.nav-links li:hover .dropdown-content {
+    display: block;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="site-heading">Easy Learn</h1>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses</a>
+                        <ul class="dropdown-content">
+                            <li><a href="html.html">HTML</a></li>
+                            <li><a href="css.html">CSS</a></li>
+                            <li><a href="java.html">Java</a></li>
+                            <li><a href="python.html">Python</a></li>
+                            <li><a href="c.html">C</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html" class="login-btn">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-container">
+            <h2>Create Account</h2>
+            <form id="createAccountForm" action="#" method="post" onsubmit="return createAccount()">
+                <table>
+                    <tr>
+                        <td><input type="email" name="email" id="email" placeholder="Email Address" required></td>
+                        <td><input type="text" name="username" id="username" placeholder="Username" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="fullname" id="fullname" placeholder="Full name" required></td>
+                        <td><input type="text" name="phone" id="phone" placeholder="Phone Number" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="password" id="password" placeholder="Password" required></td>
+                        <td><input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div id="errorMessage" class="error-message" style="display: none;"></div>
+                            <input type="submit" value="Create Account">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div class="already-have-account">
+                <p>Already have an account? <a href="signin.html">Login</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function createAccount() {
+            var email = document.getElementById('email').value;
+            var username = document.getElementById('username').value;
+            var fullname = document.getElementById('fullname').value;
+            var phone = document.getElementById('phone').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                var errorMessage = document.getElementById('errorMessage');
+                errorMessage.innerText = "Passwords do not match.";
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+            if (localStorage.getItem(username)) {
+                var errorMessage = document.getElementById('errorMessage');
+                errorMessage.innerText = "Username already exists. Please choose a different one.";
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+            if (phone.length !== 10) {
+                var errorMessage = document.getElementById('errorMessage');
+                errorMessage.innerText = "Phone number should be exactly 10 digits.";
+                errorMessage.style.display = "block";
+                return false;
+            }
+
+            localStorage.setItem(username, password);
+            localStorage.setItem(username + "_phone", phone);
+
+            window.location.href = "account.html";
+            return false;
+        }
+    </script>
+</body>
+</html>

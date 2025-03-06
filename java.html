@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Course - Easy Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .code-container {
+            margin: 2rem 0;
+        }
+
+        .code-example {
+            border: 2px solid #FF4500;
+            padding: 1rem;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            overflow: auto;
+            margin-bottom: 1rem;
+        }
+
+        .code-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .code-example code {
+            display: block;
+            color: #333;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 300px;
+            border: 2px solid #FF4500;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .nav-links a {
+            padding: 1rem 2rem;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .nav-links a:hover {
+            background: #555;
+        }
+
+        .intro, .content {
+            padding: 2rem;
+            text-align: center;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .intro h1, .content h2 {
+            color: #333;
+        }
+
+        .content p {
+            color: #666;
+        }
+
+        .content h2 {
+            color: #FF4500;
+        }
+
+        .java-info {
+            background-color: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #FF4500;
+            margin-bottom: 2rem;
+        }
+
+        .java-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <center><a href="index.html" class="logo">Easy Learn</a></center>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses</a>
+                        <ul class="dropdown-content">
+                            <li><a href="html.html">HTML</a></li>
+                            <li><a href="css.html">CSS</a></li>
+                            <li><a href="java.html">Java</a></li>
+                            <li><a href="python.html">Python</a></li>
+                            <li><a href="c.html">C</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html" class="signin-btn">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Java Course</h1>
+            <p>Java is a popular, high-level programming language known for its platform independence, object-oriented nature, and security. Created by Sun Microsystems in 1995, Java is used in web applications, desktop software, and enterprise-level systems.</p>
+        </section>
+        <section class="content">
+            <h2>What is Java?</h2>
+            <div class="java-info">
+                <ul style="color:darkblue">
+                    <li>Java is a popular, high-level programming language known for its platform independence and object-oriented nature.</li>
+                    <li>Created by Sun Microsystems in 1995, Java is widely used in web applications, desktop software, and enterprise systems.</li>
+                    <li>Java is owned by Oracle, and over 3 billion devices run Java.</li>
+                    <li>It is used for mobile apps (especially Android), desktop apps, web apps, games, database connections, and more.</li>
+                    <li>Java works across multiple platforms (Windows, Mac, Linux, Raspberry Pi, etc.).</li>
+                    <li>Java is easy to learn, open-source, free, secure, fast, and powerful, with large community support.</li>
+                    <li>Java is an object-oriented language that promotes code reuse and reduces development costs.</li>
+                    <li>Java has similarities with C++ and C#, making it easier for developers to switch between them.</li>
+                    <li>Basic programs in Java include examples like calculating the area of a circle, simple calculators, Fibonacci sequences, and factorial calculations.</li>
+                </ul>
+            </div>
+            <img src="java2.jpeg" alt="Java Logo" class="java-image">
+            <div class="java-info">
+                <p>Java is a popular programming language, created in 1995.</p>
+                <p>It is owned by Oracle, and more than 3 billion devices run Java.</p>
+                <p>It is used for:</p>
+                <ul>
+                    <li>Mobile applications (especially Android apps)</li>
+                    <li>Desktop applications</li>
+                    <li>Web applications</li>
+                    <li>Web servers and application servers</li>
+                    <li>Games</li>
+                    <li>Database connections</li>
+                    <li>And much, much more!</li>
+                </ul>
+                <h3>Why Use Java?</h3>
+                <p>Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.).</p>
+                <p>It is one of the most popular programming languages in the world and has a large demand in the current job market.</p>
+                <p>It is easy to learn, simple to use, open-source, free, secure, fast, and powerful. Java also has huge community support with tens of millions of developers.</p>
+                <p>Java is an object-oriented language that gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
+                <p>As Java is close to C++ and C#, it makes it easy for programmers to switch to Java or vice versa.</p>
+                <h3>Get Started</h3>
+                <p>When you are finished with this tutorial, you will be able to write basic Java programs and create real-life examples. No prior programming experience is necessary!</p>
+            </div>
+            <h2>Java Code Examples</h2>
+
+            <!-- Example 1 -->
+            <h3 style="text-align: left;">Example 1: Hello World Program</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">Java Example 1:</div>
+                    <code>
+import java.util.Scanner;
+class AreaOfCircle 
+{
+public static void main(String args[]) 
+{   
+Scanner s= new Scanner(System.in);
+System.out.println("Enter the radius:");
+double r= s.nextDouble();
+double  area=(22*r*r)/7 ;
+System.out.println("Area of Circle is: " + area);      
+                           }
+                        }
+                    </code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <iframe src="java_example1.html" class="iframe-container" title="Java Example 1 Output"></iframe>
+            </div>
+
+            <!-- Example 2 -->
+            <h3 style="text-align: left;">Example 2: Simple Calculator</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">Java Example 2:</div>
+                    <code>
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter two numbers: ");
+        double num1 = scanner.nextDouble();
+        double num2 = scanner.nextDouble();
+
+        System.out.println("Addition: " + (num1 + num2));
+        System.out.println("Subtraction: " + (num1 - num2));
+        System.out.println("Multiplication: " + (num1 * num2));
+        System.out.println("Division: " + (num1 / num2));
+    }
+}
+                    </code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <iframe src="java_example2.html" class="iframe-container" title="Java Example 2 Output"></iframe>
+            </div>
+
+            <!-- Example 3 -->
+            <h3 style="text-align: left;">Example 3: Fibonacci Sequence</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">Java Example 3:</div>
+                    <code>
+public class Fibonacci {
+    public static void main(String[] args) {
+        int n = 10, t1 = 0, t2 = 1;
+        System.out.print("First " + n + " terms: ");
+
+        for (int i = 1; i <= n; ++i) {
+            System.out.print(t1 + " ");
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}
+                    </code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <iframe src="java_example3.html" class="iframe-container" title="Java Example 3 Output"></iframe>
+            </div>
+
+            <!-- Example 4 -->
+            <h3 style="text-align: left;">Example 4: Factorial Calculation</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">Java Example 4:</div>
+                    <code>
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = scanner.nextInt();
+        long factorial = 1;
+
+        for (int i = 1; i <= num; ++i) {
+            factorial *= i;
+        }
+
+        System.out.println("Factorial of " + num + " = " + factorial);
+    }
+}
+                    </code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <iframe src="java_example4.html" class="iframe-container" title="Java Example 4 Output"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course - Easy Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your existing styles here */
+        .code-container {
+            margin: 2rem 0;
+        }
+
+        .code-example {
+            border: 2px solid #4a90e2;
+            padding: 1rem;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            overflow: auto;
+            margin-bottom: 1rem;
+        }
+
+        .code-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .code-example code {
+            display: block;
+            color: #333;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 300px;
+            border: 2px solid #4a90e2;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .nav-links a {
+            padding: 1rem 2rem;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .nav-links a:hover {
+            background: #555;
+        }
+
+        .intro, .content {
+            padding: 2rem;
+            text-align: center;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .intro h1, .content h2 {
+            color: #333;
+        }
+
+        .content p {
+            color: #666;
+        }
+
+        .content h2 {
+            color: #4a90e2;
+        }
+
+        .python-info {
+            background-color: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #4a90e2;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <center><a href="index.html" class="logo">Easy Learn</a></center>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses</a>
+                        <ul class="dropdown-content">
+                            <li><a href="html.html">HTML</a></li>
+                            <li><a href="css.html">CSS</a></li>
+                            <li><a href="java.html">Java</a></li>
+                            <li><a href="python.html">Python</a></li>
+                            <li><a href="c.html">C</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html" class="signin-btn">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Python Course</h1>
+            <p>Python is a popular programming language created by Guido van Rossum and released in 1991. It is widely used for web development, software development, mathematics, and system scripting.</p>
+        </section>
+        <section class="content">
+            <h2>What is Python?</h2>
+            <div class="python-info">
+                <p>Python is a versatile language that can be used on a server to create web applications, automate software processes, connect to database systems, and handle big data. Python is known for its simple syntax, making it easy to learn and use for rapid prototyping and production-ready software development.</p>
+            </div>
+            <h2>Python Code Examples</h2>
+            <h3 style="text-align: left;">Example 1: Hello World Program</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">Python Example 1:</div>
+                    <code>
+# This program adds two numbers
+
+num1 = 1.5
+num2 = 6.3
+                        
+# Add two numbers
+sum = num1 + num2
+                        
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+                        
+                    </code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <iframe src="python_example1.html" class="iframe-container" title="Python Example 1 Output"></iframe>
+            </div>
+            <h3 style="text-align: left;">Example 2: Simple Calculator</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">Python Example 2:</div>
+                    <code>
+# Simple Python calculator
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    return x / y
+
+# Example usage
+print("Addition:", add(5, 3))
+print("Subtraction:", subtract(5, 3))
+print("Multiplication:", multiply(5, 3))
+print("Division:", divide(5, 3))</code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <iframe src="python_example2.html" class="iframe-container" title="Python Example 2 Output"></iframe>
+            </div>
+            <h3 style="text-align: left;">Example 3: Fibonacci Sequence</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">Python Example 3:</div>
+                    <code>
+# Fibonacci sequence in Python
+def fibonacci(n):
+    sequence = [0, 1]
+    while len(sequence) &lt; n:
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence
+
+# Example usage
+print(fibonacci(10))</code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <iframe src="python_example3.html" class="iframe-container" title="Python Example 3 Output"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

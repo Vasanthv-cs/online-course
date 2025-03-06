@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Course - Easy Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ensure the entire page uses full screen width */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f8ff;
+        }
+
+        .code-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .code-example {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            max-height: 300px;
+            overflow-y: auto; /* Enable scrolling for large code blocks */
+            text-align: left;
+        }
+
+        .code-example code {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            color: #000;
+            font-size: 0.95rem;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .intro h1 {
+            color: #333;
+        }
+
+        .content h2 {
+            color: #32CD32;
+            margin-bottom: 1rem;
+        }
+
+        .output-container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* Different border colors for each example */
+        .border-red {
+            border: 3px solid #FF6347; /* Tomato */
+        }
+
+        .border-blue {
+            border: 3px solid #1E90FF; /* DodgerBlue */
+        }
+
+        .border-yellow {
+            border: 3px solid #FFD700; /* Gold */
+        }
+
+        .border-green {
+            border: 3px solid #32CD32; /* LimeGreen */
+        }
+
+        .css-example-image {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 3px solid #32CD32;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <center><a href="index.html" class="logo">Easy Learn</a></center>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses</a>
+                        <ul class="dropdown-content">
+                            <li><a href="html.html">HTML</a></li>
+                            <li><a href="css.html">CSS</a></li>
+                            <li><a href="java.html">Java</a></li>
+                            <li><a href="python.html">Python</a></li>
+                            <li><a href="c.html">C</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html" class="signin-btn">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>CSS Course</h1>
+            <p>CSS (Cascading Style Sheets) is a language used to describe the presentation of a document written in HTML or XML.</p>
+        </section>
+
+        <section class="content">
+            <h2>CSS Examples</h2>
+
+            <!-- CSS Related Image -->
+            <img src="css1.webp" alt="CSS Example Image" class="css-example-image" style="width:750px;height:550px">
+
+            <!-- Example 1 -->
+            <div class="code-container border-red">
+                <div class="code-title">CSS Example 1:</div>
+                <div class="code-example">
+                    <code>
+/* CSS Styling */
+body {
+    background-color: #f0f8ff;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #32CD32;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+}
+                    </code>
+                </div>
+                <div class="output-container">
+                    <h2 style="color: #32CD32; text-align: center;">This is Example 1 Output</h2>
+                    <p style="font-size: 1rem;">This paragraph is styled using CSS with a light blue background and centered green heading.</p>
+                </div>
+            </div>
+
+            <!-- Example 2 -->
+            <div class="code-container border-blue">
+                <div class="code-title">CSS Example 2:</div>
+                <div class="code-example">
+                    <code>
+/* Another CSS Example */
+div.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #1E90FF;
+    background-color: #fff;
+}
+                    </code>
+                </div>
+                <div class="output-container">
+                    <div class="container" style="border: 3px solid #1E90FF; padding: 20px; width: 80%; margin: 0 auto; background-color: #fff;">
+                        <p>This is a div with 80% width, centered with blue borders and padding.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example 3 -->
+            <div class="code-container border-yellow">
+                <div class="code-title">CSS Example 3:</div>
+                <div class="code-example">
+                    <code>
+/* CSS Box Model Example */
+div.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #FFD700;
+    margin: 10px auto;
+    background-color: #f0f8ff;
+}
+                    </code>
+                </div>
+                <div class="output-container">
+                    <div class="box" style="width: 300px; padding: 20px; border: 5px solid #FFD700; margin: 10px auto; background-color: #f0f8ff;">
+                        <p>This is a box with padding and margin, styled using CSS box model.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example 4 -->
+            <div class="code-container border-green">
+                <div class="code-title">CSS Example 4:</div>
+                <div class="code-example">
+                    <code>
+/* CSS Flexbox Example */
+div.flex-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f8ff;
+}
+
+div.flex-container div {
+    background-color: #32CD32;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+                    </code>
+                </div>
+                <div class="output-container">
+                    <div class="flex-container" style="display: flex; justify-content: space-around; background-color: #f0f8ff;">
+                        <div style="background-color: #32CD32; color: white; padding: 15px; margin: 10px; border-radius: 10px;">
+                            Flex Item 1
+                        </div>
+                        <div style="background-color: #32CD32; color: white; padding: 15px; margin: 10px; border-radius: 10px;">
+                            Flex Item 2
+                        </div>
+                        <div style="background-color: #32CD32; color: white; padding: 15px; margin: 10px; border-radius: 10px;">
+                            Flex Item 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

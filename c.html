@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Course - Easy Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your existing styles here */
+        .code-container {
+            margin: 2rem 0;
+        }
+
+        .code-example {
+            border: 2px solid #4a90e2;
+            padding: 1rem;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            overflow: auto;
+            margin-bottom: 1rem;
+        }
+
+        .code-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .code-example code {
+            display: block;
+            color: #333;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 300px; /* Adjust height as needed */
+            border: 2px solid #4a90e2;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .nav-links a {
+            padding: 1rem 2rem;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .nav-links a:hover {
+            background: #555;
+        }
+
+        .intro, .content {
+            padding: 2rem;
+            text-align: center;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .intro h1, .content h2 {
+            color: #333;
+        }
+
+        .content p {
+            color: #666;
+        }
+
+        .content h2 {
+            color: #4a90e2;
+        }
+
+        .c-info {
+            background-color: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #4a90e2;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <center><a href="index.html" class="logo">Easy Learn</a></center>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses</a>
+                        <ul class="dropdown-content">
+                            <li><a href="html.html">HTML</a></li>
+                            <li><a href="css.html">CSS</a></li>
+                            <li><a href="java.html">Java</a></li>
+                            <li><a href="python.html">Python</a></li>
+                            <li><a href="c.html">C</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html" class="signin-btn">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>C Programming Course</h1>
+            <p>C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972. It is a very popular language, despite being old. The main reason for its popularity is because it is a fundamental language in the field of computer science. C is strongly associated with UNIX, as it was developed to write the UNIX operating system.</p>
+        </section>
+
+        <section class="content">
+            <h2>Why Learn C?</h2>
+            <div class="c-info">
+                <ul>
+                    <li>It is one of the most popular programming languages in the world.</li>
+                    <li>If you know C, you will have no problem learning other popular programming languages such as Java, Python, C++, C#, etc, as the syntax is similar.</li>
+                    <li>C is very fast, compared to other programming languages, like Java and Python.</li>
+                    <li>C is very versatile; it can be used in both applications and technologies.</li>
+                </ul>
+            </div>
+
+            <h2>Difference between C and C++</h2>
+            <p>C++ was developed as an extension of C, and both languages have almost the same syntax. The main difference between C and C++ is that C++ supports classes and objects, while C does not.</p>
+            
+            <h2>Get Started</h2>
+            <p>This tutorial will teach you the basics of C. When you are finished with this tutorial, you will be able to write C programs and create real-life examples. It is not necessary to have any prior programming experience.</p>
+
+            <!-- Image Section -->
+            <img src="c2.png" alt="C Programming Image" style="width:100%; height:auto; margin-bottom: 2rem;">
+
+            <!-- Code Examples -->
+            <h3 style="text-align: left;">EXAMPLE 1:</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">C Example 1:</div>
+                    <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+                    </code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <!-- Iframe Output for Example 1 -->
+                <iframe src="c_example1.html" class="iframe-container" title="C Example 1 Output"></iframe>
+            </div>
+
+            <h3 style="text-align: left;">EXAMPLE 2:</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">C Example 2:</div>
+                    <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &amp;num);
+    printf("You entered: %d", num);
+    return 0;
+}
+                    </code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <iframe src="c_example2.html" class="iframe-container" title="C Example 2 Output"></iframe>
+            </div>
+
+            <h3 style="text-align: left;">EXAMPLE 3:</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">C Example 3:</div>
+                    <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i, n, sum = 0;
+    printf("Enter a positive integer: ");
+    scanf("%d", &amp;n);
+    for (i = 1; i &lt;= n; ++i) {
+        sum += i;
+    }
+    printf("Sum = %d", sum);
+    return 0;
+}
+                    </code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <iframe src="c_example3.html" class="iframe-container" title="C Example 3 Output"></iframe>
+            </div>
+
+            <h3 style="text-align: left;">EXAMPLE 4:</h3>
+            <div class="code-container">
+                <div class="code-example">
+                    <div class="code-title">C Example 4:</div>
+                    <code>
+#include &lt;stdio.h&gt;
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 5, y = 10;
+    printf("Before swap: x = %d, y = %d\n", x, y);
+    swap(&amp;x, &amp;y);
+    printf("After swap: x = %d, y = %d", x, y);
+    return 0;
+}
+                    </code>
+                </div>
+                <h2 style="text-align:left;color:#333">Output:</h2>
+                <iframe src="c_example4.html" class="iframe-container" title="C Example 4 Output"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

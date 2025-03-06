@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .courses {
+            padding: 20px;
+        }
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .course-box {
+            width: 280px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .course-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .course-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .course-description {
+            font-size: 14px;
+            color: #555;
+            margin: 10px 0;
+        }
+        .learn-link {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #0073e6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .learn-link:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="site-heading">Easy Learn</h1>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses</a>
+                        <ul class="dropdown-content">
+                            <li><a href="html.html">HTML</a></li>
+                            <li><a href="css.html">CSS</a></li>
+                            <li><a href="java.html">Java</a></li>
+                            <li><a href="python.html">Python</a></li>
+                            <li><a href="c.html">C</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signin.html" class="login-btn">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="courses">
+            <h2>Featured Courses</h2>
+            <div class="course-container">
+                <div class="course-box">
+                    <img src="html1.webp" alt="HTML Course" class="course-img">
+                    <h4 class="course-title">HTML</h4>
+                    <p class="course-description">Learn the basics of HTML and how to build web pages.</p>
+                    <a href="html.html" class="learn-link">Learn HTML</a>
+                </div>
+
+                <div class="course-box">
+                    <img src="java1.webp" alt="Java Course" class="course-img">
+                    <h4 class="course-title">Java</h4>
+                    <p class="course-description">Master Java for software development and backend applications.</p>
+                    <a href="java.html" class="learn-link">Learn Java</a>
+                </div>
+
+                <div class="course-box">
+                    <img src="c1.png" alt="C Course" class="course-img">
+                    <h4 class="course-title">C Programming</h4>
+                    <p class="course-description">Explore the C programming language for system development.</p>
+                    <a href="c.html" class="learn-link">Learn C</a>
+                </div>
+            </div>
+        </section>
+
+        <h3>Enhance Your Skills with Easy Learn</h3>
+        <h4>Discover new technologies and start learning today!</h4>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
+            <section class="reviews-qa">
+                <h4>Reviews and Questions</h4>
+                <div class="qa">
+                    <h5>About the Platform:</h5>
+                    <p>Our platform provides a comprehensive range of online courses designed to enhance your skills and knowledge in various fields. It offers a user-friendly interface and a rich library of educational resources to help you achieve your learning goals.</p>
+                </div>
+                <div class="qa">
+                    <h5>Courses Offered by the Platform:</h5>
+                    <p>We offer a diverse selection of courses including programming, data science, web development, and more. Each course is crafted by experts and includes interactive content, practical exercises, and assessments to ensure effective learning.</p>
+                </div>
+                <div class="qa">
+                    <h5>Is It Easy to Learn from Easy Learn?</h5>
+                    <p>Yes, Easy Learn is designed with simplicity in mind. Its intuitive interface and structured course material make it easy for learners of all levels to navigate and absorb new concepts effectively.</p>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Script to handle modal functionality
+        document.querySelector('.login-btn').onclick = function() {
+            document.getElementById('loginModal').style.display = 'block';
+        };
+
+        document.querySelector('.modal .close').onclick = function() {
+            document.getElementById('loginModal').style.display = 'none';
+        };
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('loginModal')) {
+                document.getElementById('loginModal').style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
