@@ -1,202 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Course - Easy Learn</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Your existing styles here */
-        .code-container {
-            margin: 2rem 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Easy Learn – Python Course</title>
+  <style>
+    body {font-family: Arial,sans-serif; margin:0; background:#f4f4f4;}
+    header,footer {background:#333;color:#fff;text-align:center;padding:1rem;}
+    main {max-width:900px;margin:auto;padding:2rem;background:#fff;}
+    .code-box {background:#eee;padding:1rem;border-left:5px solid #00aaff; border-radius:5px;white-space:pre; overflow-x:auto; font-family:monospace; margin-bottom:0.5rem;}
+    .run-btn {display:inline-block;background:#00aaff;color:#fff;padding:0.5rem 1rem;border-radius:4px;text-decoration:none;margin-bottom:1rem;}
+    .run-btn:hover {background:#008ecc;}
+    h1,h2 {color:#333;}
+    ul, li, p {color:#555;}
+    form {background:#fafafa;padding:1rem;border:1px solid #ccc;border-radius:6px;}
+    form ol {padding-left:1.2rem;}
+    label {display:block;margin-bottom:0.5rem;}
+    button{background:#00aaff;color:#fff;padding:0.5rem 1rem;border:none;border-radius:5px;cursor:pointer;}
+    button:hover{background:#008ecc;}
+    #quiz-result{margin-top:1rem;font-weight:bold;}
+    /* Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      background-color: #333;
+      flex-wrap: wrap;
+    }
 
-        .code-example {
-            border: 2px solid #4a90e2;
-            padding: 1rem;
-            background-color: #f0f8ff;
-            border-radius: 8px;
-            overflow: auto;
-            margin-bottom: 1rem;
-        }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
 
-        .code-title {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1rem;
+    }
 
-        .code-example code {
-            display: block;
-            color: #333;
-            font-family: 'Courier New', Courier, monospace;
-            white-space: pre-wrap;
-        }
+    .nav-links li {
+      position: relative;
+    }
 
-        .iframe-container {
-            width: 100%;
-            height: 300px;
-            border: 2px solid #4a90e2;
-            margin-bottom: 2rem;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding: 6px 12px;
+      transition: 0.3s;
+    }
 
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
+    .nav-links a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
 
-        .nav-links a {
-            padding: 1rem 2rem;
-            background: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            text-align: center;
-        }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border-radius: 6px;
+      z-index: 1000;
+    }
 
-        .nav-links a:hover {
-            background: #555;
-        }
+    .dropdown-content li {
+      border-bottom: 1px solid #444;
+    }
 
-        .intro, .content {
-            padding: 2rem;
-            text-align: center;
-            background-color: #fff;
-            border-bottom: 2px solid #ddd;
-        }
+    .dropdown-content li:last-child {
+      border-bottom: none;
+    }
 
-        .intro h1, .content h2 {
-            color: #333;
-        }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+    }
 
-        .content p {
-            color: #666;
-        }
-
-        .content h2 {
-            color: #4a90e2;
-        }
-
-        .python-info {
-            background-color: #f0f8ff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 2px solid #4a90e2;
-            margin-bottom: 2rem;
-        }
-    </style>
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <center><a href="index.html" class="logo">Easy Learn</a></center>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="courses.html" class="dropbtn">Courses</a>
-                        <ul class="dropdown-content">
-                            <li><a href="html.html">HTML</a></li>
-                            <li><a href="css.html">CSS</a></li>
-                            <li><a href="java.html">Java</a></li>
-                            <li><a href="python.html">Python</a></li>
-                            <li><a href="c.html">C</a></li>
+<!-- HEADER -->
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Easy Learn</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="courses.html">Courses</a>
+        <ul class="dropdown-content">
+          <li><a href="html.html">HTML</a></li>
+          <li><a href="css.html">CSS</a></li>
+          <li><a href="java.html">Java</a></li>
+          <li><a href="python.html">Python</a></li>
+          <li><a href="c.html">C</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+    </ul>
+  </nav>
+</header>
 
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="signin.html" class="signin-btn">Sign In</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="intro">
-            <h1>Python Course</h1>
-            <p>Python is a popular programming language created by Guido van Rossum and released in 1991. It is widely used for web development, software development, mathematics, and system scripting.</p>
-        </section>
-        <section class="content">
-            <h2>What is Python?</h2>
-            <div class="python-info">
-                <p>Python is a versatile language that can be used on a server to create web applications, automate software processes, connect to database systems, and handle big data. Python is known for its simple syntax, making it easy to learn and use for rapid prototyping and production-ready software development.</p>
-            </div>
-            <h2>Python Code Examples</h2>
-            <h3 style="text-align: left;">Example 1: Hello World Program</h3>
-            <div class="code-container">
-                <div class="code-example">
-                    <div class="code-title">Python Example 1:</div>
-                    <code>
-# This program adds two numbers
+<main>
+  <section>
+    <h2>Introduction to Python</h2>
+    <p>Python is an interpreted, high-level programming language known for its readability and versatile usage—from web development and data science to automation and AI.</p>
+    <ul>
+      <li>Easy-to-read syntax</li>
+      <li>Large standard library</li>
+      <li>Backed by vast community ecosystems</li>
+      <li>Widely used in education and industry</li>
+    </ul>
+  </section>
 
-num1 = 1.5
-num2 = 6.3
-                        
-# Add two numbers
-sum = num1 + num2
-                        
-# Display the sum
-print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
-                        
-                    </code>
-                </div>
-                <h2 style="text-align:left;color:#333">Output:</h2>
-                <iframe src="python_example1.html" class="iframe-container" title="Python Example 1 Output"></iframe>
-            </div>
-            <h3 style="text-align: left;">Example 2: Simple Calculator</h3>
-            <div class="code-container">
-                <div class="code-example">
-                    <div class="code-title">Python Example 2:</div>
-                    <code>
-# Simple Python calculator
-def add(x, y):
-    return x + y
+  <section>
+    <h2>Example 1: Hello World</h2>
+    <div class="code-box">
+print("Hello, World!")
+    </div>
+    <a class="run-btn" href="https://onecompiler.com/python" target="_blank">Run Code on OneCompiler</a>
+  </section>
 
-def subtract(x, y):
-    return x - y
+  <section>
+    <h2>Example 2: Addition</h2>
+    <div class="code-box">
+a = 5  
+b = 3  
+print("Sum =", a + b)
+    </div>
+    <a class="run-btn" href="https://onecompiler.com/python" target="_blank">Run Code on OneCompiler</a>
+  </section>
 
-def multiply(x, y):
-    return x * y
+  <section>
+    <h2>Example 3: Loop</h2>
+    <div class="code-box">
+for i in range(1, 6):  
+    print(i)
+    </div>
+    <a class="run-btn" href="https://onecompiler.com/python" target="_blank">Run Code on OneCompiler</a>
+  </section>
 
-def divide(x, y):
-    return x / y
+  <section>
+    <h2>Example 4: Function</h2>
+    <div class="code-box">
+def multiply(x, y):  
+    return x * y  
 
-# Example usage
-print("Addition:", add(5, 3))
-print("Subtraction:", subtract(5, 3))
-print("Multiplication:", multiply(5, 3))
-print("Division:", divide(5, 3))</code>
-                </div>
-                <h2 style="text-align:left;color:#333">Output:</h2>
-                <iframe src="python_example2.html" class="iframe-container" title="Python Example 2 Output"></iframe>
-            </div>
-            <h3 style="text-align: left;">Example 3: Fibonacci Sequence</h3>
-            <div class="code-container">
-                <div class="code-example">
-                    <div class="code-title">Python Example 3:</div>
-                    <code>
-# Fibonacci sequence in Python
-def fibonacci(n):
-    sequence = [0, 1]
-    while len(sequence) &lt; n:
-        sequence.append(sequence[-1] + sequence[-2])
-    return sequence
+print("Product =", multiply(4, 5))
+    </div>
+    <a class="run-btn" href="https://onecompiler.com/python" target="_blank">Run Code on OneCompiler</a>
+  </section>
 
-# Example usage
-print(fibonacci(10))</code>
-                </div>
-                <h2 style="text-align:left;color:#333">Output:</h2>
-                <iframe src="python_example3.html" class="iframe-container" title="Python Example 3 Output"></iframe>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
-        </div>
-    </footer>
+  <section>
+    <h2>🧠 Python Quiz</h2>
+    <form id="quiz-form">
+      <ol>
+        <li>What function is used to display output?</li>
+        <label><input type="radio" name="q1" value="a"> echo()</label>
+        <label><input type="radio" name="q1" value="b"> print()</label>
+        <label><input type="radio" name="q1" value="c"> output()</label>
+
+        <li>How do you define a function?</li>
+        <label><input type="radio" name="q2" value="a"> function foo():</label>
+        <label><input type="radio" name="q2" value="b"> def foo():</label>
+        <label><input type="radio" name="q2" value="c"> fn foo():</label>
+
+        <li>Which keyword is used for loops?</li>
+        <label><input type="radio" name="q3" value="a"> loop</label>
+        <label><input type="radio" name="q3" value="b"> for</label>
+        <label><input type="radio" name="q3" value="c"> iterate</label>
+      </ol>
+      <button type="button" onclick="checkQuiz()">Submit Quiz</button>
+    </form>
+    <div id="quiz-result"></div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Easy Learn. All rights reserved.</p>
+</footer>
+
+<script>
+function checkQuiz(){
+  const answers={q1:'b',q2:'b',q3:'b'};
+  let score=0, total=3;
+  for(let q in answers){
+    const sel=document.querySelector('input[name="'+q+'"]:checked');
+    if(sel && sel.value===answers[q]) score++;
+  }
+  const res=document.getElementById('quiz-result');
+  res.textContent=`You scored ${score} out of ${total}.`;
+  res.style.color=(score===total?'green':'orange');
+}
+</script>
 </body>
 </html>

@@ -1,156 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Easy Learn</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Slider Styles */
-        .slider {
-            position: relative;
-            max-width: 100%;
-            margin: 2rem auto;
-            overflow: hidden;
-            border-radius: 8px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — Easy Learn</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+    body {
+      background: #f4f5f7;
+      color: #333;
+    }
 
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 15px 30px;
+    }
 
-        .slide img {
-            width: 100%;
-            height: auto;
-        }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-        .slider-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+    }
 
-        .slider-button {
-            background-color: #333;
-            border: none;
-            color: #fff;
-            padding: 1rem;
-            cursor: pointer;
-            font-size: 1.5rem;
-        }
-    </style>
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: #555;
+    }
+
+    .nav-links li.dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      list-style: none;
+      padding: 0;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 6px;
+      text-align: center;
+      z-index: 999;
+    }
+
+    .dropdown-content li {
+      border-bottom: 1px solid #444;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2e3a46;
+      margin-bottom: 30px;
+    }
+
+    .about-section {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .about-section p {
+      line-height: 1.8;
+      margin: 15px 0;
+    }
+
+    .mission-vision {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .mission-box {
+      flex: 1;
+      background: #fefefe;
+      border-left: 5px solid #ffa726;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+
+    .mission-box h3 {
+      color: #2e3a46;
+      margin-bottom: 10px;
+    }
+
+    .team-section {
+      margin-top: 40px;
+    }
+
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .member {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .member img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .member h4 {
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .member p {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 50px;
+    }
+
+    footer .social-icons a {
+      color: #ffa726;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    footer p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="index.html" class="logo">Easy Learn</a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="courses.html" class="dropbtn">Courses</a>
-                        <ul class="dropdown-content">
-                            <li><a href="html.html">HTML</a></li>
-                            <li><a href="css.html">CSS</a></li>
-                            <li><a href="#">Java</a></li>
-                            <li><a href="#">Python</a></li>
-                            <li><a href="#">C</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="login.html" class="login-btn">Login</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="about-intro">
-            <h1>Easy Learn</h1>
-            <p>Welcome to Easy Learn, the premier online education platform designed to make learning accessible and engaging. Whether you’re looking to gain new skills, advance your career, or explore a new hobby, Easy Learn offers a comprehensive range of high-quality courses tailored to meet your needs.</p>
-        </section>
-        <section class="slider">
-            <div class="slides">
-                <div class="slide"><img src="about1.jpg" alt="Slide 1"></div>
-                <div class="slide"><img src="about2.png" alt="Slide 2"></div>
-                <div class="slide"><img src="about3.jpg" alt="Slide 3"></div>
-                <!-- Add more slides as needed -->
-            </div>
-            <div class="slider-buttons">
-                <button class="slider-button" id="prev">❮</button>
-                <button class="slider-button" id="next">❯</button>
-            </div>
-        </section>
-        <section class="description">
-            <div class="description-item" id="about-us">
-                <h2>About Us</h2>
-                <p>At Easy Learn, we believe that education should be straightforward and enjoyable. Our platform provides an array of courses across diverse fields, including programming, data science, business management, and creative arts. Each course is crafted by industry experts to ensure you receive top-notch instruction and practical insights.</p>
-            </div>
-            <div class="description-item" id="courses-offered">
-                <h2>Courses Offered</h2>
-                <p>From beginner to advanced levels, Easy Learn’s courses cover essential topics and emerging trends. Explore programming languages, delve into data analysis, enhance your business skills, or master new design techniques. Our interactive content, practical assignments, and real-world projects are designed to help you learn effectively and apply your knowledge.</p>
-            </div>
-            <div class="description-item" id="why-choose">
-                <h2>Why Choose Easy Learn?</h2>
-                <p>Our user-friendly interface and structured course materials make learning effortless. With features like video lectures, interactive quizzes, and community forums, you’ll have all the tools you need to succeed. Plus, our flexible scheduling allows you to learn at your own pace, fitting education seamlessly into your busy life.</p>
-            </div>
-        </section>
-        <section class="faqs">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>How can I contact support?</h3>
-                <p>For support, you can reach out to us via our <a href="contact.html">Contact page</a>.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can I try a course before enrolling?</h3>
-                <p>Yes, we offer free previews of many courses. Check the course details for availability.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What is the refund policy?</h3>
-                <p>We offer a 30-day money-back guarantee for most courses. Refer to our refund policy for detailed information.</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Easy Learn</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="courses.html">Courses</a>
+          <ul class="dropdown-content">
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="java.html">Java</a></li>
+            <li><a href="python.html">Python</a></li>
+            <li><a href="c.html">C</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <h1>About Easy Learn</h1>
+
+    <div class="about-section">
+      <p>Easy Learn is a modern and user-friendly platform built to empower learners at all levels. Whether you're a beginner exploring HTML or an experienced developer brushing up your skills, we make learning engaging, accessible, and practical.</p>
+
+      <p>We believe in hands-on learning, and our real-time code playground helps you write, test, and understand code live. Our team is committed to delivering the highest quality content, interactive lessons, and real-world examples that make learning to code fun and rewarding.</p>
+
+      <div class="mission-vision">
+        <div class="mission-box">
+          <h3>Our Mission</h3>
+          <p>To make high-quality tech education accessible to everyone, everywhere — with simplicity, innovation, and real-time practice tools.</p>
         </div>
-    </footer>
-    <script>
-        // JavaScript for Slider
-        const slides = document.querySelector('.slides');
-        const slideCount = document.querySelectorAll('.slide').length;
-        let index = 0;
+        <div class="mission-box">
+          <h3>Our Vision</h3>
+          <p>To become a global hub for self-paced, project-based learning where future tech leaders begin their journey.</p>
+        </div>
+      </div>
 
-        function showSlide(i) {
-            const offset = -i * 100;
-            slides.style.transform = `translateX(${offset}%)`;
-        }
+      <div class="team-section">
+        <h2 style="margin-top:40px; text-align:center; color:#2e3a46;">Meet Our Team</h2>
+        <div class="team-members">
+          <div class="member">
+            <img src="https://via.placeholder.com/80" alt="Founder">
+            <h4>Vasanth.V</h4>
+            <p>Founder & Developer</p>
+          </div>
+          <div class="member">
+            <img src="https://via.placeholder.com/80" alt="Content Head">
+            <h4>Sanjay.S</h4>
+            <p>Content Strategist</p>
+          </div>
+          <div class="member">
+            <img src="https://via.placeholder.com/80" alt="UI Designer">
+            <h4>Purushothaman</h4>
+            <p>UI/UX Designer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-        document.getElementById('next').addEventListener('click', () => {
-            index = (index + 1) % slideCount;
-            showSlide(index);
-        });
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-icons">
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" title="Phone"><i class="fas fa-phone-alt"></i></a>
+    </div>
+    <p>© 2024 Easy Learn. All rights reserved.</p>
+  </footer>
 
-        document.getElementById('prev').addEventListener('click', () => {
-            index = (index - 1 + slideCount) % slideCount;
-            showSlide(index);
-        });
-
-        // Optional: Auto-slide
-        setInterval(() => {
-            index = (index + 1) % slideCount;
-            showSlide(index);
-        }, 5000); // Change slide every 5 seconds
-    </script>
 </body>
 </html>

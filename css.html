@@ -1,258 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Course - Easy Learn</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Ensure the entire page uses full screen width */
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #f0f8ff;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Course - Easy Learn</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+    }
 
-        .code-container {
-            width: 90%;
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 1.5rem;
-            border-radius: 12px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
 
-        .code-title {
-            font-weight: bold;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
+    /* Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      background-color: #333;
+      flex-wrap: wrap;
+    }
 
-        .code-example {
-            background-color: #f9f9f9;
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            max-height: 300px;
-            overflow-y: auto; /* Enable scrolling for large code blocks */
-            text-align: left;
-        }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
 
-        .code-example code {
-            font-family: 'Courier New', Courier, monospace;
-            white-space: pre-wrap;
-            color: #000;
-            font-size: 0.95rem;
-        }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1rem;
+    }
 
-        .intro {
-            text-align: center;
-            padding: 2rem;
-        }
+    .nav-links li {
+      position: relative;
+    }
 
-        .intro h1 {
-            color: #333;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding: 6px 12px;
+      transition: 0.3s;
+    }
 
-        .content h2 {
-            color: #32CD32;
-            margin-bottom: 1rem;
-        }
+    .nav-links a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
 
-        .output-container {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 2rem;
-            margin-top: 1rem;
-            text-align: center;
-        }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border-radius: 6px;
+      z-index: 1000;
+    }
 
-        /* Different border colors for each example */
-        .border-red {
-            border: 3px solid #FF6347; /* Tomato */
-        }
+    .dropdown-content li {
+      border-bottom: 1px solid #444;
+    }
 
-        .border-blue {
-            border: 3px solid #1E90FF; /* DodgerBlue */
-        }
+    .dropdown-content li:last-child {
+      border-bottom: none;
+    }
 
-        .border-yellow {
-            border: 3px solid #FFD700; /* Gold */
-        }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+    }
 
-        .border-green {
-            border: 3px solid #32CD32; /* LimeGreen */
-        }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
-        .css-example-image {
-            display: block;
-            margin: 1rem auto;
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            border: 3px solid #32CD32;
-        }
-    </style>
+    .intro {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section {
+      width: 90%;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      color: #32CD32;
+    }
+
+    .code-example {
+      background-color: #f4f4f4;
+      border-left: 5px solid #32CD32;
+      padding: 1rem;
+      margin: 1rem 0;
+      white-space: pre-wrap;
+    }
+
+    .compiler {
+      margin-top: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      font-family: monospace;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ccc;
+    }
+
+    .quiz {
+      background: #e6ffe6;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+
+    .quiz h3 {
+      color: #006400;
+    }
+
+    .quiz ol li {
+      margin: 0.7rem 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding-left: 1rem;
+      }
+
+      .dropdown-content {
+        position: static;
+        transform: none;
+        width: 100%;
+        text-align: left;
+      }
+
+      .intro p, .section {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <center><a href="index.html" class="logo">Easy Learn</a></center>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="courses.html" class="dropbtn">Courses</a>
-                        <ul class="dropdown-content">
-                            <li><a href="html.html">HTML</a></li>
-                            <li><a href="css.html">CSS</a></li>
-                            <li><a href="java.html">Java</a></li>
-                            <li><a href="python.html">Python</a></li>
-                            <li><a href="c.html">C</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="signin.html" class="signin-btn">Sign In</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<!-- HEADER -->
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Easy Learn</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="courses.html">Courses</a>
+        <ul class="dropdown-content">
+          <li><a href="html.html">HTML</a></li>
+          <li><a href="css.html">CSS</a></li>
+          <li><a href="java.html">Java</a></li>
+          <li><a href="python.html">Python</a></li>
+          <li><a href="c.html">C</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <main>
-        <section class="intro">
-            <h1>CSS Course</h1>
-            <p>CSS (Cascading Style Sheets) is a language used to describe the presentation of a document written in HTML or XML.</p>
-        </section>
+<!-- MAIN CONTENT -->
+<main>
+  <section class="intro">
+    <h1>CSS Course</h1>
+    <p>CSS (Cascading Style Sheets) is the language used to describe the style and layout of HTML documents. It allows you to control colors, fonts, spacing, positioning, responsiveness, and animations, giving structure and visual appeal to your web pages.</p>
+  </section>
 
-        <section class="content">
-            <h2>CSS Examples</h2>
+  <section class="section">
+    <h2>CSS Tags & Explanations</h2>
+    <div class="code-example"><strong>color</strong>: Changes the text color.<br><code>p { color: red; }</code></div>
+    <div class="code-example"><strong>background-color</strong>: Sets background color.<br><code>body { background-color: #f0f0f0; }</code></div>
+    <div class="code-example"><strong>margin</strong>: Sets space outside the element.<br><code>div { margin: 20px; }</code></div>
+    <div class="code-example"><strong>padding</strong>: Sets space inside the element.<br><code>div { padding: 15px; }</code></div>
+    <div class="code-example"><strong>border</strong>: Adds border around the element.<br><code>div { border: 2px solid black; }</code></div>
+    <div class="code-example"><strong>display</strong>: Defines how elements are displayed (block, inline, flex).<br><code>div { display: flex; }</code></div>
+    <div class="code-example"><strong>position</strong>: Positions the element (relative, absolute, fixed, sticky).<br><code>h1 { position: absolute; top: 0; left: 0; }</code></div>
+    <div class="code-example"><strong>animation</strong>: Animates element transitions.<br><code>@keyframes example { 0% {opacity: 0;} 100% {opacity: 1;} } div { animation: example 2s; }</code></div>
+    <div class="code-example"><strong>@media</strong>: Applies styles conditionally for responsive design.<br><code>@media screen and (max-width: 600px) { body { font-size: 14px; } }</code></div>
+    <div class="code-example"><strong>transition</strong>: Adds smooth animation effects.<br><code>button { transition: all 0.3s ease; }</code></div>
+  </section>
 
-            <!-- CSS Related Image -->
-            <img src="css1.webp" alt="CSS Example Image" class="css-example-image" style="width:750px;height:550px">
-
-            <!-- Example 1 -->
-            <div class="code-container border-red">
-                <div class="code-title">CSS Example 1:</div>
-                <div class="code-example">
-                    <code>
-/* CSS Styling */
-body {
-    background-color: #f0f8ff;
-    color: #333;
-    font-family: Arial, sans-serif;
-}
-
+  <section class="section compiler">
+    <h2>Try CSS in Browser (Simple Compiler)</h2>
+    <textarea id="codeArea">
+&lt;style&gt;
 h1 {
-    color: #32CD32;
-    text-align: center;
+  color: green;
+  text-align: center;
 }
-
 p {
-    font-size: 1rem;
+  color: darkblue;
 }
-                    </code>
-                </div>
-                <div class="output-container">
-                    <h2 style="color: #32CD32; text-align: center;">This is Example 1 Output</h2>
-                    <p style="font-size: 1rem;">This paragraph is styled using CSS with a light blue background and centered green heading.</p>
-                </div>
-            </div>
+&lt;/style&gt;
+<h1>Hello CSS</h1>
+<p>This is styled using CSS!</p>
+    </textarea>
+    <button onclick="runCode()">Run Code</button>
+    <iframe id="resultFrame"></iframe>
+  </section>
 
-            <!-- Example 2 -->
-            <div class="code-container border-blue">
-                <div class="code-title">CSS Example 2:</div>
-                <div class="code-example">
-                    <code>
-/* Another CSS Example */
-div.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 3px solid #1E90FF;
-    background-color: #fff;
-}
-                    </code>
-                </div>
-                <div class="output-container">
-                    <div class="container" style="border: 3px solid #1E90FF; padding: 20px; width: 80%; margin: 0 auto; background-color: #fff;">
-                        <p>This is a div with 80% width, centered with blue borders and padding.</p>
-                    </div>
-                </div>
-            </div>
+  <section class="section quiz">
+    <h3>CSS Quiz</h3>
+    <ol>
+      <li>What does CSS stand for?</li>
+      <li>How do you select an element with ID "box" in CSS?</li>
+      <li>What property is used to change text color?</li>
+      <li>What is the default position value in CSS?</li>
+      <li>Which property allows you to make responsive designs?</li>
+      <li>What does <code>display: flex;</code> do?</li>
+      <li>How do you center an element using flexbox?</li>
+      <li>What unit is commonly used for font-size?</li>
+      <li>Which tag is used to add animations?</li>
+      <li>What is the difference between margin and padding?</li>
+      <li>How do you add a border only to the bottom of an element?</li>
+      <li>What media query is used to apply styles to screens under 768px?</li>
+    </ol>
+  </section>
+</main>
 
-            <!-- Example 3 -->
-            <div class="code-container border-yellow">
-                <div class="code-title">CSS Example 3:</div>
-                <div class="code-example">
-                    <code>
-/* CSS Box Model Example */
-div.box {
-    width: 300px;
-    padding: 20px;
-    border: 5px solid #FFD700;
-    margin: 10px auto;
-    background-color: #f0f8ff;
-}
-                    </code>
-                </div>
-                <div class="output-container">
-                    <div class="box" style="width: 300px; padding: 20px; border: 5px solid #FFD700; margin: 10px auto; background-color: #f0f8ff;">
-                        <p>This is a box with padding and margin, styled using CSS box model.</p>
-                    </div>
-                </div>
-            </div>
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Easy Learn. All rights reserved.</p>
+  </div>
+</footer>
 
-            <!-- Example 4 -->
-            <div class="code-container border-green">
-                <div class="code-title">CSS Example 4:</div>
-                <div class="code-example">
-                    <code>
-/* CSS Flexbox Example */
-div.flex-container {
-    display: flex;
-    justify-content: space-around;
-    background-color: #f0f8ff;
-}
-
-div.flex-container div {
-    background-color: #32CD32;
-    color: white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
-}
-                    </code>
-                </div>
-                <div class="output-container">
-                    <div class="flex-container" style="display: flex; justify-content: space-around; background-color: #f0f8ff;">
-                        <div style="background-color: #32CD32; color: white; padding: 15px; margin: 10px; border-radius: 10px;">
-                            Flex Item 1
-                        </div>
-                        <div style="background-color: #32CD32; color: white; padding: 15px; margin: 10px; border-radius: 10px;">
-                            Flex Item 2
-                        </div>
-                        <div style="background-color: #32CD32; color: white; padding: 15px; margin: 10px; border-radius: 10px;">
-                            Flex Item 3
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Easy Learn. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- JS Compiler Logic -->
+<script>
+  function runCode() {
+    const htmlCode = document.getElementById("codeArea").value;
+    const frame = document.getElementById("resultFrame");
+    frame.srcdoc = htmlCode;
+  }
+</script>
 
 </body>
 </html>
